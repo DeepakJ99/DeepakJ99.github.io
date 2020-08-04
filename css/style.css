@@ -97,6 +97,7 @@ body{
     width:100vw;
     display: block;
     background-color:;
+    overflow-x:hidden;
 
 }
 .owl-slider{
