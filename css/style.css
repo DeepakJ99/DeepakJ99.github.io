@@ -90,6 +90,7 @@ body{
     margin:0;
     display: none;
     animation: fadeIn 1s ease;
+    overflow-x : hidden;
     
 }
 .owl-slider{
