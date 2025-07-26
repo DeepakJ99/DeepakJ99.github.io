@@ -7,7 +7,7 @@ type ArticleResponse = {
 };
 
 export default function LandingPage() {
-  const [ArticleResponse, setArticleResponse] = useState<ArticleResponse>(null);
+  const [articleResponse, setArticleResponse] = useState<ArticleResponse | null>(null);
 
   useEffect(() => {
     const fn = async () =>{
@@ -26,7 +26,7 @@ export default function LandingPage() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-white text-black px-4">
       <h1 className="text-3xl md:text-5xl font-bold text-center max-w-2xl">
-        {ArticleResponse ? ArticleResponse.title : "LOADING"}
+        {articleResponse ? articleResponse.title : "LOADING"}
       </h1>
     </div>
   );
