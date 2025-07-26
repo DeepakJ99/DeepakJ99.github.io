@@ -1,6 +1,5 @@
 // components/CommentBox.tsx
 import React, { useState, useEffect } from "react";
-import { useAuth } from "../context/AuthContext";
 import API from "../api";
 
 interface Comment {
@@ -17,7 +16,6 @@ interface Props {
 const CommentBox: React.FC<Props> = ({ slug }) => {
   const [comments, setComments] = useState<Comment[]>([]);
   const [newComment, setNewComment] = useState("");
-  const {token} = useAuth()
   const fetchComments = async() => {
     try{
       const res = await API.get(`/articles/${slug}/comments`)
@@ -33,7 +31,7 @@ const CommentBox: React.FC<Props> = ({ slug }) => {
   const submitComment = async () => {
     console.log("clicked")
       try{
-        const res = await API.post(`/articles/${slug}/comment`, {
+        await API.post(`/articles/${slug}/comment`, {
           "content" : newComment
         })
         fetchComments()

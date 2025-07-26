@@ -1,10 +1,9 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Profile from "./pages/Profile";
 import AuthPage from "./pages/AuthPage";
 import Feed from "./pages/Feed";
 import ArticlePage from "./pages/ArticlePage";
 import ProtectedRoute from "./Components/ProtectedRoute";
-import Breadcrumbs from "./Components/Breadcrumb";
 import LandingPage from "./pages/Landing";
 
 const App = () => {
