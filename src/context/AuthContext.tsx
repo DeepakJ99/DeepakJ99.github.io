@@ -6,6 +6,7 @@ import AxiosAuthSync from "./AxiosAuthSync";
 interface User {
   id: number;
   username: string;
+  role: String
 }
 
 interface AuthContextType {
@@ -40,11 +41,11 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         catch(err){
           setUser(null)
         }
-        setIsLoading(false)
       }
+      setIsLoading(false)
     }
     fetchUser()
-  }, []);
+  }, [token]);
 
   const login = async (token: string) => {
     localStorage.setItem("token", token);
