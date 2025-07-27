@@ -1,4 +1,4 @@
-import { FaHammer, FaHome, FaMoon, FaReadme, FaSun, FaUser } from "react-icons/fa";
+import { FaHome, FaMoon, FaReadme, FaSun, FaUser } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 

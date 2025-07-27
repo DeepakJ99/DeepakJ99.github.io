@@ -1,7 +1,5 @@
-// components/LikeButton.tsx
-import React, { useEffect, useState } from "react";
 import API from "../api";
-import { FaEye, FaThumbsUp } from "react-icons/fa";
+import { FaThumbsUp } from "react-icons/fa";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 

@@ -19,17 +19,6 @@ const projects = [
   },
   // Add more
 ];
-interface Tag {
-  title: string;
-  link: string;
-}
-
-interface Project {
-  title: string;
-  description: string;
-  link: string;
-  tags: Tag[];
-}
 
 export default function FunProjects() {
   return (
