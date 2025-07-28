@@ -6,6 +6,7 @@ import API from "../api";
 import MarkdownRenderer from "../Components/MarkdownRenderer";
 import SkeletonCard from "../Components/SkeletonCard";
 import LikesAndViews from "../Components/LikesAndViews";
+import Tags from "../Components/Tags";
 
 export default function ArticlePage() {
   const { slug } = useParams();
@@ -15,7 +16,6 @@ export default function ArticlePage() {
     const a = async () => {
       try{
         const res = await API.get(`articles/${slug}`)
-        console.log(res.data)
         setArticle(res.data)
         setLoading(false)
       }
@@ -32,6 +32,7 @@ export default function ArticlePage() {
         loading ? <SkeletonCard/> : 
         <>
           <LikesAndViews likes={article.likes} views={article.views} />
+          <Tags tags = {article.tags} />
           <h1 className="text-2xl sm:text-3xl mt-5 sm:mt-7 font-bold mb-2 dark:text-stone-50 text-zinc-800">
             {article.title}
           </h1>

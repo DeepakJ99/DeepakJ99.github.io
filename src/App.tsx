@@ -7,7 +7,6 @@ import ProtectedRoute from "./Components/ProtectedRoute";
 import LandingPage from "./pages/Landing";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
-import Breadcrumbs from "./Components/Breadcrumb";
 import FunProjects from "./pages/FunProjects";
 import AdminArticlePage from "./pages/AdminArticlePage";
 import NotFoundPage from "./pages/NotFoundPage";
@@ -18,7 +17,6 @@ const App = () => {
     <div className="min-h-screen w-full sm:w-[90%] md:w-[70%] mx-auto">
       <Router>
         <Header />
-        <Breadcrumbs />
         <Routes>
           <Route path = "/" element = {<LandingPage />} />
           <Route path="/articles" element={<Feed />} />
