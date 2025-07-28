@@ -29,8 +29,8 @@ const Breadcrumbs = () => {
   });
 
   return (
-    <nav className="sticky top-13 z-50 bg-stone-50 dark:bg-zinc-800 border-b border-gray-200 dark:border-zinc-700">
-      <ul className="flex flex-wrap items-center space-x-1 px-2 sm:px-4 py-2">
+    <nav className="w-full justify-start bg-stone-50 dark:bg-zinc-800">
+      <ul className="flex flex-wrap items-center  space-x-1 px-2 sm:px-4 py-2 max-w-full">
         <li>
           <Link to="/" className="text-xs sm:text-sm hover:underline text-zinc-800 dark:text-stone-50">Home</Link>
           {breadcrumbs.length > 0 && <span className="mx-1 sm:mx-2 text-xs sm:text-sm">/</span>}
