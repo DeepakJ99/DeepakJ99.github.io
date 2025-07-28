@@ -24,7 +24,7 @@ const ArticleCard: React.FC<ArticleProps> = ({ title, excerpt, author, date, slu
     >
       <LikesAndViews likes={likes} views={views} />
       <Tags tags = {tags} setSearchTerm = {setSearchTerm} />
-      <h2 className="text-lg mt-4 sm:text-xl font-semibold mb-2">{title}{title}</h2>
+      <h2 className="text-lg mt-4 sm:text-xl font-semibold mb-2">{title}</h2>
 
       <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base mb-4">
         <MarkdownRenderer content={excerpt} />
