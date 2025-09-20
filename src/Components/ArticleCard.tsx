@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import LikesAndViews from "./LikesAndViews";
 import Tags from "./Tags";
-import MarkdownRenderer from "./MarkdownRenderer";
+import ArticleRenderer from "./ArticleRenderer";
 
 interface ArticleProps {
   title: string;
@@ -38,9 +38,9 @@ const ArticleCard: React.FC<ArticleProps> = ({
         <h2 className="text-lg sm:text-xl font-semibold mb-2 relative z-10">
           {title}
         </h2>
-        <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base relative z-10">
-          <MarkdownRenderer content={excerpt} />
-        </p>
+        {/* <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base relative z-10"> */}
+          <ArticleRenderer content={excerpt} />
+        {/* </p> */}
 
         {/* White overlay that fades upward */}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/80 via-white/40 to-transparent dark:from-zinc-800/80 dark:via-zinc-800/40 rounded-b-lg z-20" />

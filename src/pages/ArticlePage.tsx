@@ -3,10 +3,11 @@ import { useEffect, useState } from "react";
 import LikeButton from "../Components/LikeButton";
 import CommentBox from "../Components/Comment";
 import API from "../api";
-import MarkdownRenderer from "../Components/MarkdownRenderer";
+
 import SkeletonCard from "../Components/SkeletonCard";
 import LikesAndViews from "../Components/LikesAndViews";
 import Tags from "../Components/Tags";
+import ArticleRenderer from "../Components/ArticleRenderer";
 
 export default function ArticlePage() {
   const { slug } = useParams();
@@ -36,10 +37,10 @@ export default function ArticlePage() {
           <h1 className="text-2xl sm:text-3xl mt-5 sm:mt-7 font-bold mb-2 dark:text-stone-50 text-zinc-800">
             {article.title}
           </h1>
-          <p className="text-xs sm:text-sm text-zinc-500 mb-4 sm:mb-6">
+          <div className="text-xs sm:text-sm text-zinc-500 mb-4 sm:mb-6">
             By {article.author_username} on {new Date(article.created_at).toLocaleDateString()}
-          </p>
-          <MarkdownRenderer content={article.content} />
+          </div>
+          <ArticleRenderer content={article.content} />
           <LikeButton slug={slug!} />
           <CommentBox slug={slug!} />
         </>
